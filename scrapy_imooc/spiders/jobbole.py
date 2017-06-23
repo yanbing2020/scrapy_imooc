@@ -30,6 +30,7 @@ class JobboleSpider(scrapy.Spider):
     def parse_detail(response):
         ArticleItem = JobBoleArticleItem()
         print(response.text)
+        ads = addd
         pass
         # article_item = JobBoleArticleItem()
 
