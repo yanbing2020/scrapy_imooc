@@ -56,12 +56,12 @@ class JobboleSpider(scrapy.Spider):
 
         article_item["url_object_id"] = get_md5(response.url)
         article_item["title"] = title
-        article["url"] = response.url
+        article_item["url"] = response.url
         try:
             creat_date = datetime.datetime.strptime(creat_date,  "%Y/%m/%d").date()
         except Exception as e:
             creat_date = datetime.datetime.now().date()
-        article_item["creat_date"] = create_date
+        article_item["creat_date"] = creat_date
         article_item["front_image_url"] = [front_image_url]
         article_item["praise_nums"] = praise_nums
         article_item["comment_nums"] = comment_nums
@@ -69,5 +69,4 @@ class JobboleSpider(scrapy.Spider):
         article_item["tags"] = tags
         article_item["contents"] = content
         yield article_item
-        ads = 12
         # article_item = JobBoleArticleItem()
