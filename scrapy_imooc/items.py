@@ -13,5 +13,13 @@ class ScrapyImoocItem(scrapy.Item):
     # name = scrapy.Field()
     pass
 
+
 class JobBoleArticleItem(scrapy.Item):
     title = scrapy.Field()
+    create_date = scrapy.Field()
+    front_image_url = scrapy.Field()
+    praise_nums = scrapy.Field()
+    comment_nums = scrapy.Field()
+    fav_nums = scrapy.Field()
+    tags = scrapy.Field()
+    contents = scrapy.Field()
